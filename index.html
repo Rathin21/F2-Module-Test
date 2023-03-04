@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="header">
+        <h3>Blogging Website</h3>
+        <button class="create-btn" onclick="showModal()">Create New Post</button>
+    </div>
+    <!-- create post modal -->
+    <div class="create-post">
+        <span style="font-size:larger" id="new">Create A Post</span>
+        <span id="cancel" onclick="hideModal()">&times;</span><br>
+        <input type="text" id="heading" placeholder="Enter Your Heading"><br>
+        <textarea id="content" placeholder="Enter Your Blog Post"></textarea><br>
+        <button id="publish" onclick="savePost()">Publish Post</button>
+        <button id="cancel-post" onclick="hideModal()">Cancel Post</button>
+    </div>
+    <div id="posts"></div>
+    <!-- Edit post modal -->
+    <div class="Edit-post">
+        <span style="font-size:larger" id="new">Edit A Post</span>
+        <span id="cancel" onclick="hideModal()">&times;</span><br>
+        <input type="text" id="heading1" placeholder="Enter Your Heading"><br>
+        <textarea id="content1" placeholder="Enter Your Blog Post"></textarea><br>
+        <button id="Edit" onclick="saveEditedPost()">Edit Post</button>
+        <button id="Delete-post" onclick="deleteEditPost()">Delete Post</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
