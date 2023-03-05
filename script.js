@@ -50,7 +50,7 @@ function savePost(){
     post.innerHTML +=`<button onclick="editPost(${oid-1})">Edit Post</button>`;
     post.innerHTML +=`<button onclick="deletePost(${postid})">Delete Post</button>`;
     
-    post.innerHTML += `<span>Created By: ${day} at ${time}</span>`;
+    post.innerHTML += `<span>Created On: ${day} at ${time}</span>`;
 
     document.getElementById('posts').appendChild(post);
     document.getElementById('heading').value="";
